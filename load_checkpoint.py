@@ -50,8 +50,6 @@ with tf.variable_scope('cost'):
     Y = tf.placeholder(tf.float32, shape=(None, num_output))
     cost = tf.reduce_mean(tf.squared_difference(prediction, Y))
 
-with tf.variable_scope('train'):
-    opt = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
 
 with tf.variable_scope('logging'):
     tf.summary.scalar('current_cost', cost)
@@ -59,40 +57,24 @@ with tf.variable_scope('logging'):
 
 saver = tf.train.Saver()
 
-init = tf.global_variables_initializer()
+#init = tf.global_variables_initializer()
 
 with tf.Session() as sess:
-    sess.run(init)
+    #sess.run(init)
 
-    for epoch in range(num_epochs):
-        print ("Training pass {}".format(epoch + 1))
+    saver.restore(sess, './logs/trained_model.ckpt')
 
-        sess.run(opt, feed_dict={
-            X: load_model.data['X_train'],
-            Y: load_model.data['Y_train'],
-        })
+    final_train_cost = sess.run(cost, feed_dict={
+        X: load_model.data['X_train'],
+        Y: load_model.data['Y_train']
+    })
 
-        train_writer = tf.summary.FileWriter('./logs/training', sess.graph)
-        test_writer = tf.summary.FileWriter('./logs/testing', sess.graph)
+    final_test_cost = sess.run(cost, feed_dict={
+        X: load_model.data['X_test'],
+        Y: load_model.data['Y_test']
+    })
 
-        if epoch % display_step == 0:
-            train_cost, train_summary = sess.run([cost, summary] , feed_dict={
-                X: load_model.data['X_train'],
-                Y: load_model.data['Y_train']
-            })
+print ("Final Training Cost is ", final_train_cost)
+print ("Final Testing Cost is ", final_test_cost)
 
-            test_cost, test_summary = sess.run([cost, summary], feed_dict={
-                X: load_model.data['X_test'],
-                Y: load_model.data['Y_test']
-            })
 
-            train_writer.add_summary(train_summary, epoch)
-            test_writer.add_summary(test_summary, epoch)
-
-            print ('Training Cost is {:,.6f} Testing Cost is {:,.6f}'.format(train_cost, test_cost))
-
-    print ("Training is Complete !")
-
-    save_path = saver.save(sess, './logs/trained_model.ckpt')
-
-    print ("Model saved: {}".format(save_path))

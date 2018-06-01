@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c57e5a2d-ddfa-4bab-a6ad-ddf6db0e4ab4" name="Default" comment="" />
+    <list default="true" id="c57e5a2d-ddfa-4bab-a6ad-ddf6db0e4ab4" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/model_logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_logging.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,11 +13,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="model_logging.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="model_logging.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model_logging.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="76" column="51" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="51" />
+            <state relative-caret-position="1674">
+              <caret line="93" column="36" selection-start-line="93" selection-start-column="36" selection-end-line="93" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="load_checkpoint.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/load_checkpoint.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="66" column="49" lean-forward="true" selection-start-line="66" selection-start-column="49" selection-end-line="66" selection-end-column="49" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -41,6 +55,7 @@
         <option value="$PROJECT_DIR$/load_model.py" />
         <option value="$PROJECT_DIR$/model.py" />
         <option value="$PROJECT_DIR$/model_logging.py" />
+        <option value="$PROJECT_DIR$/load_checkpoint.py" />
       </list>
     </option>
   </component>
@@ -59,6 +74,11 @@
             <path>
               <item name="Learning_Tensorflow" type="b2602c69:ProjectViewProjectNode" />
               <item name="Learning_Tensorflow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Learning_Tensorflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Learning_Tensorflow" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Learning_Tensorflow" type="b2602c69:ProjectViewProjectNode" />
@@ -87,7 +107,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.model_logging">
+  <component name="RunManager" selected="Python.load_checkpoint">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Learning_Tensorflow" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -101,6 +121,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="usr/local/bin/python2.7" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="load_checkpoint" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Learning_Tensorflow" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python2.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/load_checkpoint.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -164,9 +202,11 @@
       <item itemvalue="Python.load_model" />
       <item itemvalue="Python.model" />
       <item itemvalue="Python.model_logging" />
+      <item itemvalue="Python.load_checkpoint" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.load_checkpoint" />
         <item itemvalue="Python.model_logging" />
         <item itemvalue="Python.model" />
         <item itemvalue="Python.load_model" />
@@ -193,7 +233,7 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13530655" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32848486" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32848486" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -235,8 +275,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model_logging.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="76" column="51" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="51" />
+        <state relative-caret-position="1674">
+          <caret line="93" column="36" selection-start-line="93" selection-start-column="36" selection-end-line="93" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/load_checkpoint.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="66" column="49" lean-forward="true" selection-start-line="66" selection-start-column="49" selection-end-line="66" selection-end-column="49" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
